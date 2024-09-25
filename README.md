@@ -1,8 +1,8 @@
 # anota_ai
 
-# Projeto de Testes de Cálculo de Frete - Cypress
+# Projeto de Testes ANOTA AI - Cypress
 
-Este projeto contém automação de testes desenvolvida em Cypress para validar o cálculo de frete no site[Anota.AI ](https://staging-cardapio-digital.anota-ai.com/loja/teste-vaga-qa?f=msa). 
+Este projeto contém automação de testes desenvolvida em Cypress para validar o site[Anota.AI ](https://staging-cardapio-digital.anota-ai.com/loja/teste-vaga-qa?f=msa). 
 
 
 ## Pré-requisitos
