@@ -1,0 +1,45 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Define os dois ambientes: Desktop e Mobile
+        device: [desktop, mobile]
+
+    steps:
+      # Verifica o repositório
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      # Instala o Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Instala as dependências do projeto
+      - name: Install dependencies
+        run: npm install
+
+      # Executa os testes do Cypress para cada ambiente (desktop e mobile)
+      - name: Run Cypress Tests
+        run: npm run cy:run:${{ matrix.device }}
+
+      # Publica os vídeos e screenshots de falhas, se existirem
+      - name: Upload Cypress Artifacts
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: cypress/screenshots, cypress/videos

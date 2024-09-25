@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+
+# Cypress-specific folders
+cypress/videos/
+cypress/screenshots/
+
+# Cypress configuration cache and log files
+.cypress_cache/
+cypress.log
+
+# Environment files (if used for sensitive data)
+.env
+
+# Miscellaneous
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE folders
+.vscode/
+.idea/
+
+# Build folders (in case of bundling or using a framework)
+dist/
+build/
+
