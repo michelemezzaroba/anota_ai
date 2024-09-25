@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:desktop": "cypress run --env device=desktop --config viewportWidth=1920,viewportHeight=1080",
+    "cy:run:mobile": "cypress run --env device=mobile --config viewportWidth=390,viewportHeight=844"
+  },
   "devDependencies": {
     "cypress": "^13.14.2",
     "cypress-cucumber-preprocessor": "^4.3.1",
